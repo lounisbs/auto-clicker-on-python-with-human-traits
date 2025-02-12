@@ -15,15 +15,6 @@ A simple and configurable autoclicker designed to simulate mouse movements and c
 - Python 3.x
 - The following libraries must be installed: `pyautogui`, `keyboard`
 
-## Installation
-
-1. Clone the repository or download the files.
-2. Install the necessary dependencies.
-    ```bash
-    pip install pyautogui keyboard
-    ```
-3. Run the script.
-
 ## Usage
 
 1. **Run the script:** Once the script is executed, it will give you a 15-second window to position the mouse where you want the clicks to start.
