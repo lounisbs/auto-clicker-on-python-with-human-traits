@@ -5,7 +5,7 @@ import keyboard
 import math  
 
 min_delay = 0.02  
-max_delay = .1  
+max_delay = 0.05 
 zone_size = 30  
 x_variance = 2  
 y_variance = 2  
@@ -30,21 +30,18 @@ print("Appuyez sur 'Esc' pour arrêter.")
 
 time.sleep(wait_time)
 
+x, y = pyautogui.position()        
+x_min = max(x - zone_size // 2, 0)  
+x_max = x + zone_size // 2
+y_min = max(y - zone_size // 2, 0)
+y_max = y + zone_size // 2
+
 try:
     while True:
-        x, y = pyautogui.position()
 
-        
-        x_min = max(x - zone_size // 2, 0)  
-        x_max = x + zone_size // 2
-        y_min = max(y - zone_size // 2, 0)
-        y_max = y + zone_size // 2
-
-        
         x_click = random.randint(x_min, x_max)
         y_click = random.randint(y_min, y_max)
-
-        
+    
         move_smoothly(x, y, x_click, y_click, duration=random.uniform(0.02, 0.05))
 
         pyautogui.click()
